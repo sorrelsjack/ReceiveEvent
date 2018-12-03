@@ -15,6 +15,26 @@ namespace ReceiveEvent {
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Get",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Event", action = "Get", id = UrlParameter.Optional },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+            );
+
+            routes.MapRoute(
+                name: "Post",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Event", action = "Post", id = UrlParameter.Optional },
+                constraints: new {httpMethod = new HttpMethodConstraint("POST")}
+            );
+
+            routes.MapRoute(
+                name: "API Page",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "EventUI", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

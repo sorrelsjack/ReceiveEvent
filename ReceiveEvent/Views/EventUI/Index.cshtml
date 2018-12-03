@@ -1,0 +1,34 @@
+﻿<%@Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="C:\Users\sorre\source\repos\ReceiveEvent\ReceiveEvent\Scripts\eventuiscripts.js"></script>
+    <title>API Page</title>
+</head>
+<body>
+    <div>
+        <form asp-controller="EventUI">
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="idField">Event ID</label>
+                    <input type="text" readonly class="form-control" id="idField" placeholder="Event ID">
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="locationField">Location</label>
+                <input type="text" class="form-control" id="locationField" placeholder="Location">
+            </div>
+            <div class="form-group">
+                <label for="eventField">Event Type</label>
+                <input type="text" class="form-control" id="eventField" placeholder="Event Type">
+            </div>
+            <button type="submit" id="btnGet" class="btn btn-primary" runat="server" onServerClick="btnGet_Click">GET</button>
+            <button type="submit" id="btnGetAll" class="btn btn-primary">GET ALL</button>
+            <button type="submit" id="btnPost" class="btn btn-primary" action="/EventUI/btnPost_Click" method="post">POST</button>
+        </form>
+    </div>
+</body>
+</html>
