@@ -16,7 +16,7 @@ namespace ReceiveEvent {
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
+            /*routes.MapRoute(
                 name: "Get",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Event", action = "Get", id = UrlParameter.Optional },
@@ -34,7 +34,7 @@ namespace ReceiveEvent {
                 name: "API Page",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "EventUI", action = "Index", id = UrlParameter.Optional }
-            );
+            );*/
         }
     }
 }
