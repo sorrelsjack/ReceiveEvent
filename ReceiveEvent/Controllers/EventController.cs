@@ -36,7 +36,7 @@ namespace ReceiveEvent.Controllers
         [System.Web.Http.Route("api/Event/Send")]
         [System.Web.Http.AcceptVerbs("POST")]
         [System.Web.Http.HttpPost]
-        public IHttpActionResult Post(Event eventToAdd) {
+        public IHttpActionResult Post(Event eventToAdd) { //send with socket
             this.eventRepository.PostEvent(eventToAdd);
 
             return Ok();

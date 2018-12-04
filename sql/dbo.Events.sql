@@ -1,17 +1,13 @@
-USE [EventLocationData]
-GO
-
-/****** Object: Table [dbo].[Events] Script Date: 12/3/2018 6:17:10 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
+﻿/*Create DB named EventLocationData*/
 
 CREATE TABLE [dbo].[Events] (
-    [Id]        INT           NOT NULL,
+    [Id]        INT IDENTITY  NOT NULL,
     [Location]  NVARCHAR (50) NOT NULL,
-    [EventType] NVARCHAR (50) NOT NULL
+    [EventType] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
+INSERT INTO Events (Location, EventType) VALUES ('circus', 'elephant stampede');
+INSERT INTO Events (Location, EventType) VALUES ('forest', 'fire');
+INSERT INTO Events (Location, EventType) VALUES ('jims house', 'front door');
 

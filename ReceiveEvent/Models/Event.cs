@@ -9,6 +9,10 @@ namespace ReceiveEvent.Models {
         public string location;
         public string eventType;
 
+        public Event () {
+
+        }
+
         public Event (string location, string eventType) {
             this.location = location;
             this.eventType = eventType;

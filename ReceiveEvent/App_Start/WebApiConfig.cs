@@ -12,6 +12,7 @@ namespace ReceiveEvent {
             config.MapHttpAttributeRoutes();
 
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("application/json"));
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("html/text"));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
@@ -27,8 +28,8 @@ namespace ReceiveEvent {
 
             config.Routes.MapHttpRoute(
                 name: "Post",
-                routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { controller = "Event", action = "Post", id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}",
+                defaults: new { controller = "Event", action = "Post" }
             );
 
             config.Routes.MapHttpRoute(
